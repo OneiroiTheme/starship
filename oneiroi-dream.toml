@@ -12,7 +12,7 @@ palette = 'foo'
 3rd = '#AAFFDF'
 1st-s = '#B1768C'
 com = '#53575B'
-inf = '#AACAFA'
+inf = '#AACAFF'
 suc = '#6FFF6A'
 err = '#FF6A6F'
 
