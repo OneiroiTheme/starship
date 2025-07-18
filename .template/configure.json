@@ -1,0 +1,4 @@
+{
+    "input": "/.template/template.toml",
+    "output": "/{{theme}}-{{plt}}.toml"
+}
