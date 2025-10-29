@@ -7,17 +7,17 @@ right_format = """$cmd_duration"""
 
 palette = 'foo'
 [palettes.foo]
-1st = '{{prim}}'
-2nd = '{{seco}}'
-3rd = '{{tert}}'
-1st-s = '{{prims}}'
-com = '{{com}}'
-inf = '{{quin}}'
-suc = '{{suc}}'
-err = '{{err}}'
+1st = '{{primary}}'
+2nd = '{{secondary}}'
+3rd = '{{tertiary}}'
+com = '{{outline}}'
+hl = '{{info}}'
+inf = '{{info}}'
+suc = '{{success}}'
+err = '{{error}}'
 
 [os]
-format = '[\[$symbol\] ](3rd bold)'
+format = '[\[$symbol\] ](hl bold)'
 disabled = false
 
 [os.symbols]
@@ -69,8 +69,8 @@ Windows = "󰍲"
 
 [username]
 format = '[$user]($style)'
-style_user = '2nd'
-style_root = '3rd bold'
+style_user = '3rd'
+style_root = 'hl bold'
 show_always = true
 # aliases = { "corpuser034g" = "matchai" }
 
@@ -81,23 +81,23 @@ ssh_symbol = ""
 
 [directory]
 format = ' [$path]($style)[$read_only]($read_only_style) '
-style = '1st-s bold'
+style = '3rd bold'
 truncation_length = 3
 truncation_symbol = '…/'
 read_only = ''
 read_only_style = 'err'
 
 [git_branch]
-format = '[\[](3rd)[$symbol$branch(:$remote_branch)]($style)[\]](3rd)'
-style = '1st'
+format = '[\[](hl)[$symbol$branch(:$remote_branch)]($style)[\]](hl)'
+style = '2nd'
 symbol = ''
 truncation_length = 6
 truncation_symbol = '…'
 
 [conda]
-format = '[\[](3rd)[$symbol$environment]($style)[\]](3rd)'
+format = '[\[](hl)[$symbol$environment]($style)[\]](hl)'
 symbol = ''
-style = '1st'
+style = '2nd'
 truncation_length = 1
 
 [character]
