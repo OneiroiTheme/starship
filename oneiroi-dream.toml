@@ -2,22 +2,22 @@
 
 add_newline = false
 
-format = '''$os$username$hostname$git_branch$conda$directory$character'''
+format = '''$os$username$hostname$git_branch$conda$python$directory$character'''
 right_format = """$cmd_duration"""
 
 palette = 'foo'
 [palettes.foo]
-1st = '#FFAACA'
-2nd = '#FFDFAA'
-3rd = '#AAFFDF'
-1st-s = '#B1768C'
-com = '#53575B'
-inf = '#AACAFF'
-suc = '#6FFF6A'
-err = '#FF6A6F'
+1st = '#ffb0cd'
+2nd = '#ffb1c0'
+3rd = '#ffb4a9'
+com = '#c0adb1'
+hl = '#6A6FFF'
+inf = '#6A6FFF'
+suc = '#6fff6a'
+err = '#ff6a6f'
 
 [os]
-format = '[\[$symbol\] ](3rd bold)'
+format = '[\[$symbol\] ](hl bold)'
 disabled = false
 
 [os.symbols]
@@ -69,8 +69,8 @@ Windows = "󰍲"
 
 [username]
 format = '[$user]($style)'
-style_user = '2nd'
-style_root = '3rd bold'
+style_user = '3rd'
+style_root = 'hl bold'
 show_always = true
 # aliases = { "corpuser034g" = "matchai" }
 
@@ -81,24 +81,31 @@ ssh_symbol = ""
 
 [directory]
 format = ' [$path]($style)[$read_only]($read_only_style) '
-style = '1st-s bold'
+style = '3rd bold'
 truncation_length = 3
 truncation_symbol = '…/'
 read_only = ''
 read_only_style = 'err'
 
 [git_branch]
-format = '[\[](3rd)[$symbol$branch(:$remote_branch)]($style)[\]](3rd)'
-style = '1st'
+format = '[\[](hl)[$symbol$branch(:$remote_branch)]($style)[\]](hl)'
+style = '2nd'
 symbol = ''
 truncation_length = 6
 truncation_symbol = '…'
 
 [conda]
-format = '[\[](3rd)[$symbol$environment]($style)[\]](3rd)'
+format = '[\[](hl)[$symbol$environment]($style)[\]](hl)'
 symbol = ''
-style = '1st'
+style = '2nd'
 truncation_length = 1
+
+[python]
+format = '[\[](hl)[$symbol$version$pyenv_prefix(\($virtualenv\))]($style)[\]](hl)'
+symbol = ''
+style = '1st'
+pyenv_prefix = '(pyenv)'
+version_format = '${raw}'
 
 [character]
 success_symbol = "[❯](inf)"
