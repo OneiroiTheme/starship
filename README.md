@@ -11,8 +11,10 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/OneiroiTheme/starship/main/assets/oneiroi-preview.png" alt="preview" width="80%" />
+  <img src="https://raw.githubusercontent.com/OneiroiTheme/starship/main/assets/oneiroi-preview.jpg" alt="preview" width="80%" />
 </p>
+
+Inspired by [Gruvbox Rainbow](https://starship.rs/presets/gruvbox-rainbow), and [Bracketed Segments](https://starship.rs/presets/bracketed-segments).
 
 ## Previews
 
@@ -27,6 +29,13 @@
 <details>
 <summary>☕ caffeine</summary>
 <img src="https://raw.githubusercontent.com/OneiroiTheme/starship/main/assets/oneiroi-caffeine.png" alt="screenshot_caffeine" />
+</details>
+
+### Powerline
+
+<details>
+<summary>💊 malatonin</summary>
+<img src="https://raw.githubusercontent.com/OneiroiTheme/starship/main/assets/oneiroi-melatonin-powerline.jpg" alt="screenshot_melatonin_powerline" />
 </details>
 
 ## Installation

@@ -1,0 +1,153 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+[](1st)\
+$os\
+$username\
+[](bg:3rd fg:1st)\
+$directory\
+[](bg:2nd fg:3rd)\
+$git_branch\
+$git_status\
+[](bg:suc fg:2nd)\
+$conda\
+$python\
+[](bg:inf fg:suc)\
+$time\
+[ ](fg:inf)\
+$cmd_duration\
+$line_break\
+$character"""
+
+
+palette = 'foo'
+[palettes.foo]
+1st = '#ffb0cd'
+2nd = '#ffb1c0'
+3rd = '#ffb4a9'
+com = '#c0adb1'
+hl = '#6A6FFF'
+inf = '#6A6FFF'
+suc = '#6fff6a'
+err = '#ff6a6f'
+
+[os]
+style = "bg:1st fg:black"
+disabled = false
+
+[os.symbols]
+Alpaquita = ""
+Alpine = ""
+AlmaLinux = ""
+Amazon = ""
+Android = ""
+Arch = ""
+Artix = ""
+CachyOS = ""
+CentOS = ""
+Debian = ""
+DragonFly = ""
+Emscripten = ""
+EndeavourOS = ""
+Fedora = ""
+FreeBSD = ""
+Garuda = "󰛓"
+Gentoo = ""
+HardenedBSD = "󰞌"
+Illumos = "󰈸"
+Kali = ""
+Linux = ""
+Mabox = ""
+Macos = ""
+Manjaro = ""
+Mariner = ""
+MidnightBSD = ""
+Mint = ""
+NetBSD = ""
+NixOS = ""
+Nobara = ""
+OpenBSD = "󰈺"
+openSUSE = ""
+OracleLinux = "󰌷"
+Pop = ""
+Raspbian = ""
+Redhat = ""
+RedHatEnterprise = ""
+RockyLinux = ""
+Redox = "󰀘"
+Solus = "󰠳"
+SUSE = ""
+Ubuntu = ""
+Unknown = ""
+Void = ""
+Windows = "󰍲"
+
+[username]
+format = '[ $user ]($style)'
+style_user = "bg:1st fg:black"
+style_root = "bg:1st fg:black"
+show_always = true
+
+[hostname]
+format = '[@$hostname$ssh_symbol ]($style)'
+style = "bg:1st fg:black"
+ssh_only = false
+ssh_symbol = ""
+
+[directory]
+format = '[ $path ]($style)[$read_only]($read_only_style)'
+style = "bg:3rd fg:black"
+truncation_length = 3
+truncation_symbol = '…/'
+read_only = ''
+read_only_style = "bg:3rd fg:err"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+[git_branch]
+format = '[ $symbol$branch(:$remote_branch)]($style)'
+style = "bg:2nd fg:black"
+symbol = ''
+truncation_length = 6
+truncation_symbol = '…'
+
+[git_status]
+style = "bg:2nd fg:black"
+format = '[$all_status$ahead_behind ]($style)'
+
+[conda]
+format = '[ $symbol$environment ]($style)'
+symbol = ''
+style = "bg:suc fg:black"
+truncation_length = 1
+
+[python]
+format = '[ $symbol$version$pyenv_prefix(\($virtualenv\)) ]($style)'
+symbol = ''
+style = "bg:suc fg:black"
+pyenv_prefix = '(pyenv)'
+version_format = '${raw}'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:inf fg:black"
+format = '[  $time ]($style)'
+
+[character]
+success_symbol = "[❯](inf)"
+error_symbol = "[❯](err bold)"
+vimcmd_symbol = "[❮](inf)"
+
+[cmd_duration]
+format = '[$duration]($style)'
+style = 'com'
+min_time = 2_000
+show_milliseconds = true
