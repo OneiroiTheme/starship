@@ -6,6 +6,8 @@ format = """
 [](1st)\
 $os\
 $username\
+$hostname\
+[ ](bg:1st fg:1st)\
 [](bg:3rd fg:1st)\
 $directory\
 [](bg:2nd fg:3rd)\
@@ -16,7 +18,7 @@ $conda\
 $python\
 [](bg:inf fg:suc)\
 $time\
-[ ](fg:inf)\
+[ ](fg:inf bg:black)\
 $cmd_duration\
 $line_break\
 $character"""
@@ -85,15 +87,15 @@ Void = ""
 Windows = "󰍲"
 
 [username]
-format = '[ $user ]($style)'
+format = '[ $user]($style)'
 style_user = "bg:1st fg:black"
 style_root = "bg:1st fg:black"
 show_always = true
 
 [hostname]
-format = '[@$hostname$ssh_symbol ]($style)'
+format = '[@$hostname$ssh_symbol]($style)'
 style = "bg:1st fg:black"
-ssh_only = false
+ssh_only = true
 ssh_symbol = ""
 
 [directory]
