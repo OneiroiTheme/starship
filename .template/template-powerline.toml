@@ -18,7 +18,7 @@ $conda\
 $python\
 [](bg:inf fg:suc)\
 $time\
-[ ](fg:inf bg:black)\
+[ ](fg:inf)\
 $cmd_duration\
 $line_break\
 $character"""
